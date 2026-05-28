@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Список популярних фільмів</h1>
+
+    <ul class="list-group mb-4">
+        {% for id, movie in movies.items() %}
+            <li class="list-group-item">
+                <a href="{{ url_for('movie_detail', id=id) }}" class="text-decoration-none">
+                    {{ movie.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('random_movie') }}" class="btn btn-success">Випадковий фільм</a>
+</div>
+{% endblock %}

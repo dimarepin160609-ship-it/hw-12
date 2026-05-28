@@ -1,0 +1,36 @@
+/* Основний стиль для тіла сторінки */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 50px;
+}
+
+/* Оформлення навігації */
+nav {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ефект при наведенні на кнопки */
+.btn-outline-dark:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Додатковий відступ для таблиць */
+table {
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* Стиль для карток фільмів */
+.card {
+    border-left: 5px solid #0d6efd;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+</head>
+<body>
+    <h1>Вітаємо у нашому додатку!</h1>
+
+    <!-- ЗАВДАННЯ 1: Навігація -->
+    <nav>
+        <a href="{{ url_for('countries') }}"><button>Країни</button></a>
+        <a href="{{ url_for('contact') }}"><button>Контакти</button></a>
+    </nav>
+
+    <hr>
+
+    <!-- ЗАВДАННЯ 2: Список фільмів -->
+    <h3>Популярні фільми:</h3>
+    <ul>
+        {% for id, movie in movies.items() %}
+            <li>
+                <a href="{{ url_for('movie_detail', movie_id=id) }}">
+                    {{ movie.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <!-- ЗАВДАННЯ 2: Кнопка рандому -->
+    <a href="{{ url_for('random_movie') }}">
+        <button style="background-color: #ffcc00;">Мені пощастить (Випадковий фільм)</button>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Цікаві місця для подорожей</h1>
+
+    <div class="card p-4">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Японія</li>
+            <li class="list-group-item">Ісландія</li>
+            <li class="list-group-item">Італія</li>
+            <li class="list-group-item">Перу</li>
+            <li class="list-group-item">Норвегія</li>
+        </ul>
+
+        <div class="mt-4">
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Повернутися на головну</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

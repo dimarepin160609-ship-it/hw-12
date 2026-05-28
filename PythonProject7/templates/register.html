@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Реєстрація на вебінар</h2>
+    <form method="POST" class="mt-3">
+        <div class="mb-3">
+            <label for="name" class="form-label">Ім'я</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="time" class="form-label">Бажаний час</label>
+            <select class="form-select" id="time" name="time" required>
+                <option value="" disabled selected>Оберіть час...</option>
+                <option value="Ранок">Ранок</option>
+                <option value="День">День</option>
+                <option value="Вечір">Вечір</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Зареєструватися</button>
+    </form>
+</div>
+{% endblock %}

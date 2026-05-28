@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Список зареєстрованих учасників</h2>
+
+    {% if participants %}
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Ім'я</th>
+                <th>Email</th>
+                <th>Бажаний час</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in participants %}
+            <tr>
+                <td>{{ p.name }}</td>
+                <td>{{ p.email }}</td>
+                <td>{{ p.time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info">
+        Список учасників наразі порожній. Будьте першими, хто зареєструється!
+    </div>
+    {% endif %}
+
+    <a href="{{ url_for('register') }}" class="btn btn-secondary mt-3">Додати нового учасника</a>
+</div>
+{% endblock %}
